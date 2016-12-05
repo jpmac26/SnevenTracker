@@ -126,8 +126,6 @@
     <OutDir>Release\</OutDir>
     <IntDir>Release\</IntDir>
     <LinkIncremental />
-    <IncludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;$(UCRTContentRoot)Include\10.0.10586.0\ucrt;$(UCRTContentRoot)Include\10.0.10586.0\um;$(UCRTContentRoot)Include\10.0.10586.0\shared;$(UCRTContentRoot)Include\10.0.10586.0\winrt</IncludePath>
-    <LibraryPath>$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;C:\Program Files (x86)\Windows Kits\10\lib\10.0.10586.0\ucrt\x86;C:\Program Files (x86)\Windows Kits\10\lib\10.0.10586.0\um\x86</LibraryPath>
     <GenerateManifest>false</GenerateManifest>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -153,7 +151,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(BOOST_DIR)\;$(DXSDK_DIR)\Include\;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(UniversalCRT_IncludePath);C:\Program Files\Windows Kits\10\Include\10.0.10240.0\ucrt;$(WindowsSdkDir_81)Include\um;$(WindowsSdkDir_81)Include\shared;$(WindowsSdkDir_81)Include\winrt;$(UCRTContentRoot)Include\10.0.10586.0\ucrt;$(UCRTContentRoot)Include\10.0.10586.0\um;$(UCRTContentRoot)Include\10.0.10586.0\shared;$(UCRTContentRoot)Include\10.0.10586.0\winrt;$(DXSDK_DIR)Include\;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -172,7 +170,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>Dbghelp.lib;winmm.lib;comctl32.lib;dsound.lib;dxguid.lib;Version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(DXSDK_DIR)\Lib\x86\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(UniversalCRT_LibraryPath_x86);C:\Program Files (x86)\Windows Kits\10\lib\10.0.10586.0\ucrt\x86;C:\Program Files (x86)\Windows Kits\10\lib\10.0.10586.0\um\x86;C:\Program Files\Windows Kits\10\lib\10.0.10240.0\ucrt\x86;C:\Program Files\Windows Kits\8.1\Lib\winv6.3\um\x86;$(DXSDK_DIR)\Lib\x86\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -226,7 +224,7 @@
     <ClCompile>
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <Optimization>MinSpace</Optimization>
-      <AdditionalIncludeDirectories>$(BOOST_DIR)\;$(DXSDK_DIR)\Include\;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(UniversalCRT_IncludePath);C:\Program Files\Windows Kits\10\Include\10.0.10240.0\ucrt;$(WindowsSdkDir_81)Include\um;$(WindowsSdkDir_81)Include\shared;$(WindowsSdkDir_81)Include\winrt;$(UCRTContentRoot)Include\10.0.10586.0\ucrt;$(UCRTContentRoot)Include\10.0.10586.0\um;$(UCRTContentRoot)Include\10.0.10586.0\shared;$(UCRTContentRoot)Include\10.0.10586.0\winrt;$(DXSDK_DIR)Include\;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -244,7 +242,7 @@
     <Link>
       <AdditionalDependencies>Dbghelp.lib;winmm.lib;comctl32.lib;dsound.lib;dxguid.lib;Version.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <Version />
-      <AdditionalLibraryDirectories>$(DXSDK_DIR)\Lib\x86\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(UniversalCRT_LibraryPath_x86);C:\Program Files (x86)\Windows Kits\10\lib\10.0.10586.0\ucrt\x86;C:\Program Files (x86)\Windows Kits\10\lib\10.0.10586.0\um\x86;C:\Program Files\Windows Kits\10\lib\10.0.10240.0\ucrt\x86;C:\Program Files\Windows Kits\8.1\Lib\winv6.3\um\x86;$(DXSDK_DIR)\Lib\x86\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <GenerateMapFile>false</GenerateMapFile>
       <SubSystem>Windows</SubSystem>
